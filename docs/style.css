@@ -12,6 +12,9 @@
 #view {
     display: block;
     margin: auto;
+    width: 75%;
+    max-width: 800px;
     border-radius: 10px;
     background-color: var(--foreground-color);
+
 }
