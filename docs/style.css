@@ -1,0 +1,17 @@
+:root {
+    color-scheme: light dark;
+
+    --accent-color: rgb(0, 128, 255);
+    --text-color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));
+    --foreground-color: light-dark(rgb(240, 240, 240), rgb(64, 64, 64));
+    --background-color: light-dark(rgb(255, 255, 255), rgb(32, 32, 32));
+
+    background-color: var(--background-color);
+}
+
+#view {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--foreground-color);
+}
