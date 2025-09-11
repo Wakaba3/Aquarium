@@ -1,1 +1,0 @@
-const canvas = new Canvas(context);
