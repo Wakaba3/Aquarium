@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wakaba Paint</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer type="text/javascript" src="utils.js"></script>
+    <script defer type="text/javascript" src="document.js"></script>
+    <script defer type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <canvas id="view" width="800" height="800"></canvas>
+
+        <div id="menu" hidden>
+            <div id="menu-selector">
+                <button id="menu-previous" class="generic-button" type="button">&lt;</button>
+                <div id="menu-title" class="generic-box"><div>Untitled</div></div>
+                <button id="menu-next" class="generic-button" type="button">&gt;</button>
+            </div>
+        </div>
+
+        <div id="customize-wrapper">
+            <button id="customize" class="generic-button" type="button" aria-expanded="false" aria-controls="menu-wrapper">≡</button>
+        </div>
+    </div>
+</body>
+
+</html>
