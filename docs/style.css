@@ -1,0 +1,100 @@
+:root {
+    color-scheme: light dark;
+
+    --accent-color: light-dark(rgb(128, 192, 255), rgb(0, 64, 128));
+    --text-color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));
+    --foreground-color: light-dark(rgb(240, 240, 240), rgb(64, 64, 64));
+    --background-color: light-dark(rgb(255, 255, 255), rgb(32, 32, 32));
+
+    background-color: var(--background-color);
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    color: var(--text-color);
+    border: thin solid var(--foreground-color);
+    border-radius: 10px;
+}
+
+#view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    border-radius: 10px;
+    background-color: var(--foreground-color);
+}
+
+#view[aria-disabled="true"] {
+    pointer-events: none;
+}
+
+#view[aria-disabled="false"] {
+    pointer-events: auto;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    color: var(--text-color);
+    border: thin solid var(--foreground-color);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease, linear;
+    transition-delay: 0s;
+}
+
+#menu[aria-hidden="true"] {
+    pointer-events: none;
+    transform: translate(-50%, -60%);
+    opacity: 0%;
+}
+
+#menu[aria-hidden="false"] {
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+}
+
+#customize-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-150%, -150%);
+}
+
+#customize {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.generic-button {
+    transform: scale(100%);
+    border: thin solid var(--background-color);
+    border-radius: 5px;
+    background-color: var(--foreground-color);
+}
+
+.generic-button:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
+}
+
+.generic-button:active {
+    transform: scale(90%);
+    background-color: var(--foreground-color);
+}
