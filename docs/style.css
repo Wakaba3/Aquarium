@@ -1,0 +1,36 @@
+:root {
+    color-scheme: light dark;
+    --main-bg-color: light-dark(rgb(224, 224, 224), rgb(32, 32, 32));
+    --main-fg-color: light-dark(rgb(192, 192, 192), rgb(64, 64, 64));
+
+    background-color: var(--main-bg-color);
+}
+
+#view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    border: thin solid var(--main-fg-color);
+    border-radius: 10px;
+}
+
+#canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    z-index: 0;
+    border-radius: 10px;
+    background-color: var(--main-fg-color);
+}
+
+#info {
+    position: absolute;
+    z-index: 100;
+}
